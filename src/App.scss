@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-color: #ededed;
+}
+
+.container {
+  display: grid;
+  font-size: 2rem;
+  margin-top: 2rem;
+  grid-template-columns: repeat(4, 5rem);
+}
+
+.monitor {
+  grid-column: 1 / -1;
+  border: 1px solid black;
+  background-color: rgb(80, 79, 79);
+  color: white;
+  text-align: end;
+  padding: 1rem;
+  word-break: break-all;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 1.5rem;
+  border: 1px solid rgb(171, 171, 171);
+  color: white;
+}
+
+.span-2 {
+  grid-column: span 2;
+}
+
+.btn {
+  &-func {
+    background-color: rgb(80, 79, 79);
+    &:hover,
+    :focus {
+      background-color: rgb(39, 38, 38);
+    }
+  }
+  &-operator {
+    background-color: rgb(233, 112, 6);
+    &:hover,
+    :focus {
+      background-color: rgb(255, 136, 0);
+    }
+    &-highlight:focus {
+      border: 2px solid white;
+    }
+  }
+  &-digit {
+    background-color: rgb(126, 125, 125);
+    &:hover,
+    :focus {
+      background-color: rgb(79, 78, 78);
+    }
+  }
+}
